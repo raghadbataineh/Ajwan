@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -15,6 +16,20 @@ class CourseController extends Controller
     public function index()
     {
         //
+    }
+
+    public function CourseDetails($id)
+    {
+        $category = Category::find($id);
+    
+        if (!$category) {
+            abort(404);
+        }
+    
+        // Retrieve all products associated with this shop
+        $courses = $category->courses;
+    
+        return view('detail', compact('courses'));
     }
 
     /**

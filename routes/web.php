@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\MailController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +22,19 @@ Route::get('/', function () {
 });
 
 Route::get('/', [CategoryController::class, 'indexcategory'])->name('category.indexcategory');
-// Route::get('/shop/{id}', [CategoryController::class, 'shop'])->name('shop.index');
+Route::get('/shop/{id}', [CategoryController::class, 'shop'])->name('shop.index');
+Route::get('/coursedetails', function () {
+    return view('detail');
+});
+
+// Route::get('details/{id}', [CourseController::class, 'CourseDetails'])->name('coursedetails');
+Route::get('/about', function () {
+    return view('about
+    ');
+})->name('about');
+
+
+// contact us page routes
+Route::get('/contact-us', [MailController::class, 'showContact'])->name('show.contact');
+Route::post('/contact-us', [MailController::class, 'sendContact'])->name('contact.us.store');
+

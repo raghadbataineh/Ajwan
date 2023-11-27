@@ -10,5 +10,6 @@
 
 @include('.\layouts\footerlinks')
 
-
 @yield('scripts')
+
+

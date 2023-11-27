@@ -14,6 +14,14 @@
 
 
 
+
+
+
+
+
+
+
+
 <body>
     <!-- Topbar Start -->
 
@@ -168,7 +176,7 @@
                     <div class="border-top w-100 mt-3">
                     </div>
                     <div class="w-100 bg-white text-center p-4" >
-                        {{-- <a class="btn btn-primary" href="{{ route('shop.index', ['id' => $category->id]) }}">تفاصيل الدورة</a> --}}
+                        <a class="btn btn-primary" href="{{ route('shop.index', ['id' => $category->id]) }}">تفاصيل الدورة</a>
                     </div>
                 </div>
             </div>
@@ -373,8 +381,8 @@
     </div>
     <!-- Contact End -->
 
-
     @endsection
+
 
     @section('scripts')
 
