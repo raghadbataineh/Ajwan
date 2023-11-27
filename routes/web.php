@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
  
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\MailController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,22 @@ use App\Http\Controllers\CourseController;
 //     return view('course');
 // });
 Route::get('/course', [CourseController::class, 'course'])->name('course');
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/coursedetails', function () {
+    return view('detail');
+});
+
+// Route::get('details/{id}', [CourseController::class, 'CourseDetails'])->name('coursedetails');
+Route::get('/about', function () {
+    return view('about
+    ');
+})->name('about');
+
+
+// contact us page routes
+Route::get('/contact-us', [MailController::class, 'showContact'])->name('show.contact');
+Route::post('/contact-us', [MailController::class, 'sendContact'])->name('contact.us.store');
+

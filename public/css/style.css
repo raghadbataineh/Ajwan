@@ -6355,8 +6355,9 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 
+
 .bg-primary {
-  background-color: #2878EB !important;
+  background-color: black !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9802,9 +9803,10 @@ h6,
 }
 
 .jumbotron.page-header {
-  background: linear-gradient(rgba(40, 120, 235, 0.9), rgba(40, 120, 235, 0.9)), url(../img/page-header.jpg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 215, 0, 0.9)), url(../img/page-header.jpg) no-repeat center center;
   background-size: cover;
 }
+
 
 .overlay-top::before,
 .overlay-bottom::after {

@@ -1,4 +1,20 @@
 
+@extends('.\layouts\master')
+
+{{-- @section('title','') --}}
+
+
+@section('css')
+
+@endsection
+
+
+
+@section('content')
+
+
+
+
 
 <body>
     <!-- Topbar Start -->
@@ -451,6 +467,10 @@
     </div>
     <!-- Contact End -->
 
+    @endsection
 
- 
+    @section('scripts')
+    
+    @endsection
 
+  

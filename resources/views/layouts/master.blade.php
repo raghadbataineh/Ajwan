@@ -2,11 +2,16 @@
 
 @include('layouts.navbar');
 
-@yield('content');
+
+@yield('css')
+@yield('content')
 
 @include('layouts.footer')
 
 @include('layouts.footerlinks');
+
+
     
 
+@yield('scripts')
 

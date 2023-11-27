@@ -1,96 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('.\layouts\master')
 
-<head>
-    <meta charset="utf-8">
-    <title>Edukate - Online Education Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+{{-- @section('title','') --}}
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+@section('css')
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+@endsection
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+
+@section('content')
+
+
 
 <body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark">
-        <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
-                    <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>info@example.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>Edukate</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="course.html" class="nav-item nav-link">Courses</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="detail.html" class="dropdown-item active">Course Detail</a>
-                            <a href="feature.html" class="dropdown-item">Our Features</a>
-                            <a href="team.html" class="dropdown-item">Instructors</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Join Us</a>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
-
+ 
 
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
@@ -130,17 +54,30 @@
                 <div class="col-lg-8">
                     <div class="mb-5">
                         <div class="section-title position-relative mb-5">
+                            {{-- @foreach ($courses as $course) --}}
+                                
                             <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Course Detail</h6>
-                            <h1 class="display-4">Web design & development courses for beginners</h1>
+                            <h1 class="display-4">الماجستير المهني المصغر لإدارة الأعمال ( Mini MBA )</h1>
+                            {{-- <h1 class="display-4">{{ $course->name }}</h1> --}}
                         </div>
-                        <img class="img-fluid rounded w-100 mb-4" src="img/header.jpg" alt="Image">
-                        <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                        <img class="img-fluid rounded w-100 mb-4" src="images/bussiniss.jpg" alt="Image">
+                        <p>
+                            دبلوم التجارة وإدارة الأعمال هو برنامج تعليمي يهدف إلى تزويد الطلاب بالمهارات والمعرفة الضرورية لفهم وتنفيذ مفاهيم إدارة الأعمال والتجارة. يتم تصميم البرنامج لتلبية احتياجات الطلاب الذين يسعون للعمل في مجال الأعمال والإدارة.
+
+
+                        </p>
                         
-                        <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut magna lorem.
-                            Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet amet magna accusam
-                            consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at sanctus et. Ipsum sit
-                            gubergren dolores et, consetetur justo invidunt at et aliquyam ut et vero clita. Diam sea
-                            sea no sed dolores diam nonumy, gubergren sit stet no diam kasd vero.</p>
+                        <p> 
+
+                            إدارة الموارد البشرية: يغطي البرنامج مواضيع إدارة الموارد البشرية، بما في ذلك اختيار وتوظيف الموظفين، وتطويرهم، وإدارة العلاقات العمالية. يهدف ذلك إلى تجهيز الطلاب بمهارات القيادة والتنظيم الضرورية.
+                            
+                            الاقتصاد والتجارة الدولية: يتناول البرنامج مفاهيم الاقتصاد والتجارة الدولية، مما يمكن الطلاب من فهم تأثير الاقتصاد العالمي على الأعمال التجارية وكيفية التفاعل مع الأسواق العالمية.
+                            
+                            إدارة الابتكار والتكنولوجيا: يشمل البرنامج دراسة كيفية إدارة الابتكار واستخدام التكنولوجيا في تحسين العمليات الأعمال وتحقيق التنمية المستدامة.
+                            
+                            إدارة المشاريع: يتناول البرنامج مفاهيم إدارة المشاريع، بما في ذلك التخطيط، والتنظيم، والتنفيذ، والمراقبة. يهدف إلى تجهيز الطلاب بالمهارات اللازمة لإدارة المشاريع بفعالية.
+                            
+                            ريادة الأعمال: يتيح البرنامج للطلاب فهم عملية إنشاء وتطوير الأعمال الخاصة، بما في ذلك تطوير الفكرة، وإعداد الخطط الريادية، وإدارة المخاط</p>
                     </div>
 
                     <h2 class="mb-3">Related Courses</h2>
@@ -195,33 +132,34 @@
                         <h3 class="text-white py-3 px-4 m-0">Course Features</h3>
                         <div class="d-flex justify-content-between border-bottom px-4">
                             <h6 class="text-white my-3">Instructor</h6>
-                            <h6 class="text-white my-3">John Doe</h6>
+                            <h6 class="text-white my-3">رغد البطاينة</h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
-                            <h6 class="text-white my-3">Rating</h6>
+                            <h6 class="text-white my-3">التقييم</h6>
                             <h6 class="text-white my-3">4.5 <small>(250)</small></h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
-                            <h6 class="text-white my-3">Lectures</h6>
+                            <h6 class="text-white my-3">عدد المحاضرات</h6>
                             <h6 class="text-white my-3">15</h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
-                            <h6 class="text-white my-3">Duration</h6>
-                            <h6 class="text-white my-3">10.00 Hrs</h6>
+                            <h6 class="text-white my-3">المدة الزمنية</h6>
+                            <h6 class="text-white my-3">9 اشهر</h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
                             <h6 class="text-white my-3">Skill level</h6>
                             <h6 class="text-white my-3">All Level</h6>
                         </div>
                         <div class="d-flex justify-content-between px-4">
-                            <h6 class="text-white my-3">Language</h6>
+                            <h6 class="text-white my-3">اللغة</h6>
                             <h6 class="text-white my-3">English</h6>
                         </div>
-                        <h5 class="text-white py-3 px-4 m-0">Course Price: $199</h5>
+                        {{-- <h5 class="text-white py-3 px-4 m-0">Course Price: $199</h5> --}}
                         <div class="py-3 px-4">
                             <a class="btn btn-block btn-secondary py-3 px-5" href="">Enroll Now</a>
                         </div>
                     </div>
+                    {{-- @endforeach --}}
 
                     <div class="mb-5">
                         <h2 class="mb-3">Categories</h2>
@@ -299,95 +237,9 @@
     <!-- Detail End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
-        <div class="container mt-5 pt-5">
-            <div class="row">
-                <div class="col-md-6 mb-5">
-                    <a href="index.html" class="navbar-brand">
-                        <h1 class="mt-n2 text-uppercase text-white"><i class="fa fa-book-reader mr-3"></i>Edukate</h1>
-                    </a>
-                    <p class="m-0">Accusam nonumy clita sed rebum kasd eirmod elitr. Ipsum ea lorem at et diam est, tempor rebum ipsum sit ea tempor stet et consetetur dolores. Justo stet diam ipsum lorem vero clita diam</p>
-                </div>
-                <div class="col-md-6 mb-5">
-                    <h3 class="text-white mb-4">Newsletter</h3>
-                    <div class="w-100">
-                        <div class="input-group">
-                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary px-4">Sign Up</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Get In Touch</h3>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                    <div class="d-flex justify-content-start mt-4">
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
-                        <a class="text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Our Courses</h3>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Web Design</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Apps Design</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Marketing</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Research</a>
-                        <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>SEO</a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Quick Links</h3>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy Policy</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms & Condition</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Regular FAQs</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help & Support</a>
-                        <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-white-50 border-top py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0">Copyright &copy; <a class="text-white" href="#">Your Site Name</a>. All Rights Reserved.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center text-md-right">
-                    <p class="m-0">Designed by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+    @endsection
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+    @section('scripts')
+    
+    @endsection
+    
