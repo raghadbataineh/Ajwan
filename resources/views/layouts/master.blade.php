@@ -1,12 +1,15 @@
-@include('./headerlinks');
+@include('.\layouts\headerlinks');
 
-@include('./navbar');
+@include('.\layouts\navbar');
 
-@yield('content');
+@yield('css')
 
-@include('./footer')
+@yield('content')
 
-@include('./footerlinks');
+@include('.\layouts\footer')
+
+@include('.\layouts\footerlinks');
     
 
+@yield('scripts')
 
