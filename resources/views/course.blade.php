@@ -49,7 +49,7 @@
             <div class="row">
                 @foreach ($course as $singleCourse)
                 <div class="col-lg-4 col-md-6 pb-4">
-                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="{{ route('single', ['id' => $singleCourse->id]) }}">
                         <img class="img-fluid" src="{{ asset('img/courses-1.jpg') }}" alt="">
                         <div class="courses-text">
                             <h4 class="text-center text-white px-3">{{ $singleCourse->name }}</h4>
@@ -63,6 +63,7 @@
                     </a>
                 </div>
             @endforeach
+            
             
                 <div class="col-12">
                     <nav aria-label="Page navigation">

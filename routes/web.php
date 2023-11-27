@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MailController;
-
+ 
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,7 @@ use App\Http\Controllers\MailController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/a', function () {
+//     return view('course');
+// });
+Route::get('/course', [CourseController::class, 'course'])->name('course');
