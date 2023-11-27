@@ -16,6 +16,38 @@ class CourseController extends Controller
     {
         //
     }
+    
+    public function course()
+    {
+        $course= Course::all();
+        return view('course', compact('course'));
+    }
+//     public function filterByCategory(Request $request, $category_id)
+//    {
+//        $query = Course::where('category_id', $category_id);
+   
+//        // Handle other filters if required
+   
+//        $course = $query->paginate(9);
+       
+//        return view('course', compact('course', 'category_id'));
+//    }
+//    public function search(Request $request)
+//    {
+//        $query = Product::query();
+   
+      
+   
+//        // Handle search query
+//        if ($request->has('name1')) {
+//            $query->where('name', 'LIKE', '%' . $request->name1 . '%');
+//        }
+   
+//        // Get paginated results
+//        $product = $query->paginate(9);
+   
+//        return view('course', compact('course'));
+//    }
 
     /**
      * Show the form for creating a new resource.
