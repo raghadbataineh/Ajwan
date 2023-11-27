@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
  
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\MailController;
 
@@ -25,6 +26,8 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/', [CategoryController::class, 'indexcategory'])->name('category.indexcategory');
+Route::get('/shop/{id}', [CategoryController::class, 'shop'])->name('shop.index');
 Route::get('/coursedetails', function () {
     return view('detail');
 });
