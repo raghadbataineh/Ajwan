@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/about', function () {
+    return view('about
+    ');
+})->name('about');
+
+
+// contact us page routes
+Route::get('/contact-us', [MailController::class, 'showContact'])->name('show.contact');
+Route::post('/contact-us', [MailController::class, 'sendContact'])->name('contact.us.store');
+
