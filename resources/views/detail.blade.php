@@ -58,7 +58,7 @@
                             <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2" >تفاصيل الدورة</h6>
                             <h1 class="display-4" style="text-align: right;">{{ $courses->name }}</h1>
                         </div>
-                        <img class="img-fluid rounded w-100 mb-4" src="{{ asset ('images/' . $courses->image)}}" alt="Image" width="80%">
+                        <img class="img-fluid rounded w-100 mb-4" src="{{ asset ( $courses->image)}}" alt="Image" width="80%">
                         <p>
                             دبلوم التجارة وإدارة الأعمال هو برنامج تعليمي يهدف إلى تزويد الطلاب بالمهارات والمعرفة الضرورية لفهم وتنفيذ مفاهيم إدارة الأعمال والتجارة. يتم تصميم البرنامج لتلبية احتياجات الطلاب الذين يسعون للعمل في مجال الأعمال والإدارة.
 
@@ -82,7 +82,7 @@
 <div class="owl-carousel related-carousel position-relative" style="padding: 0 30px;">
     @foreach ($relatedCourses as $course)
         <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="{{ route('coursedetails', $course->id) }}">
-            <img class="img-fluid" src="{{ asset('images/' .$course->image) }}" alt="{{ $course->name }}">
+            <img class="img-fluid" src="{{ asset($course->image) }}" alt="{{ $course->name }}">
             <div class="courses-text">
                 <h4 class="text-center text-white px-3">{{ $course->name }}</h4>
                 <div class="border-top w-100 mt-3">

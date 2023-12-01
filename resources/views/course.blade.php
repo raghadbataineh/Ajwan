@@ -54,7 +54,7 @@
                 @foreach ($course as $singleCourse)
                 <div class="col-lg-4 col-md-6 pb-4">
                     <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="{{ route('coursedetails',$singleCourse->id)}}" >
-                        <img class="img-fluid" src="{{ asset('img/courses-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset($singleCourse->image) }}" alt="">
                         <div class="courses-text">
                             <h4 class="text-center text-white px-3">{{ $singleCourse->name }}</h4>
                             <div class="border-top w-100 mt-3">
