@@ -12,15 +12,19 @@
         </div>
         <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
             <div class="input-group">
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">الدورات</button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">الإدارة العامة والقيادة</a>
-                        <a class="dropdown-item" href="#"> الموارد البشرية والتدريب</a>
-                        <a class="dropdown-item" href="#"> العلاقات العامة والإعلام</a>
-                    </div>
-                </div>
+                <select id="categoryFilter" onchange="filterByCategory(this.value)">
+                    <option value="/">All Categories</option>
+                    <option value="1">الإدارة العامة والقيادة</option>
+                    <option value="2">الموارد البشرية والتدريب</option>
+                    <option value="3">العلاقات العامة والإعلام</option>
+                </select>
+                
+                <script>
+                    function filterByCategory(categoryId) {
+                        window.location.href = '/course/' + categoryId;
+                    }
+                </script>
+                
                 <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="الكلمة المفتاحية">
                 <div class="input-group-append">
                     <button class="btn btn-secondary px-4 px-lg-5">البحث</button>
@@ -45,7 +49,7 @@
             </div>
         </div>
 
-        <div class="container py-5">
+        <div class="container py-5"style="margin: 90px 0; direction: rtl; text-align: right;">
             <div class="row">
                 @foreach ($course as $singleCourse)
                 <div class="col-lg-4 col-md-6 pb-4">

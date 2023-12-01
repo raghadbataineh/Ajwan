@@ -22,12 +22,13 @@ use App\Http\Controllers\MailController;
 //     return view('course');
 // });
 Route::get('/course', [CourseController::class, 'course'])->name('course');
+Route::get('/course/{category_id}', [CourseController::class, 'filterByCategory'])->name('course');
+
 Route::get('/', function () {
     return view('index');
 });
 
 Route::get('/', [CategoryController::class, 'indexcategory'])->name('category.indexcategory');
-Route::get('/shop/{id}', [CategoryController::class, 'shop'])->name('shop.index');
 Route::get('/coursedetails', function () {
     return view('detail');
 });
