@@ -170,7 +170,7 @@
         <div class="owl-carousel courses-carousel">
             @foreach($categorys as $category)
             <div class="courses-item position-relative">
-                <img class="img-fluid" src="{{ url('/img/' . $category->image) }}" alt="">
+                <img class="img-fluid" src="{{ url($category->image) }}" alt="">
                 <div class="courses-text">
                     <h4 class="text-center text-white px-3">{{ $category->name }}</h4>
                     <div class="border-top w-100 mt-3">

@@ -18,9 +18,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('instructor');
             $table->string('image');
-            $table->string('Lectures');
+            $table->integer('Lectures');
             $table->string('Duration');
             $table->string('status');
+            $table->text('description');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references ('id')->on('categories')->onDelete('cascade');
             $table->timestamps();

@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','instructor','Duration','status','image','Lectures','category_id'];
+    protected $fillable = ['name','instructor','Duration','status','image','Lectures','category_id', 'description'];
 
-    public function courses(){
+    public function category(){
         return $this->belongsTo(Category::class , 'category_id');
     }
 }
