@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="ar">
-=======
 <html lang="ar" >
->>>>>>> f8d6294fee9c53c3d04a1b249fef6a42eaeadd82
 
 <head>
     <meta charset="utf-8">

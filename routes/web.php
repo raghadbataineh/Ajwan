@@ -29,11 +29,12 @@ Route::get('/', function () {
 });
 
 Route::get('/', [CategoryController::class, 'indexcategory'])->name('category.indexcategory');
+
 Route::get('/coursedetails', function () {
     return view('detail');
 });
 
-// Route::get('details/{id}', [CourseController::class, 'CourseDetails'])->name('coursedetails');
+Route::get('details/{id}', [CourseController::class, 'CourseDetails'])->name('coursedetails');
 Route::get('/about', function () {
     return view('about
     ');

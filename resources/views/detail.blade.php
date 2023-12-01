@@ -54,13 +54,11 @@
                 <div class="col-lg-8">
                     <div class="mb-5">
                         <div class="section-title position-relative mb-5">
-                            {{-- @foreach ($courses as $course) --}}
                                 
-                            <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Course Detail</h6>
-                            <h1 class="display-4">الماجستير المهني المصغر لإدارة الأعمال ( Mini MBA )</h1>
-                            {{-- <h1 class="display-4">{{ $course->name }}</h1> --}}
+                            <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2" >تفاصيل الدورة</h6>
+                            <h1 class="display-4" style="text-align: right;">{{ $courses->name }}</h1>
                         </div>
-                        <img class="img-fluid rounded w-100 mb-4" src="images/bussiniss.jpg" alt="Image">
+                        <img class="img-fluid rounded w-100 mb-4" src="{{ asset ('images/' . $courses->image)}}" alt="Image" width="80%">
                         <p>
                             دبلوم التجارة وإدارة الأعمال هو برنامج تعليمي يهدف إلى تزويد الطلاب بالمهارات والمعرفة الضرورية لفهم وتنفيذ مفاهيم إدارة الأعمال والتجارة. يتم تصميم البرنامج لتلبية احتياجات الطلاب الذين يسعون للعمل في مجال الأعمال والإدارة.
 
@@ -80,59 +78,32 @@
                             ريادة الأعمال: يتيح البرنامج للطلاب فهم عملية إنشاء وتطوير الأعمال الخاصة، بما في ذلك تطوير الفكرة، وإعداد الخطط الريادية، وإدارة المخاط</p>
                     </div>
 
-                    <h2 class="mb-3">Related Courses</h2>
-                    <div class="owl-carousel related-carousel position-relative" style="padding: 0 30px;">
-                        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html">
-                            <img class="img-fluid" src="img/courses-1.jpg" alt="">
-                            <div class="courses-text">
-                                <h4 class="text-center text-white px-3">Web design & development courses for
-                                    beginners</h4>
-                                <div class="border-top w-100 mt-3">
-                                    <div class="d-flex justify-content-between p-4">
-                                        <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
-                                            <small>(250)</small></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html">
-                            <img class="img-fluid" src="img/courses-2.jpg" alt="">
-                            <div class="courses-text">
-                                <h4 class="text-center text-white px-3">Web design & development courses for
-                                    beginners</h4>
-                                <div class="border-top w-100 mt-3">
-                                    <div class="d-flex justify-content-between p-4">
-                                        <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
-                                            <small>(250)</small></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html">
-                            <img class="img-fluid" src="img/courses-3.jpg" alt="">
-                            <div class="courses-text">
-                                <h4 class="text-center text-white px-3">Web design & development courses for
-                                    beginners</h4>
-                                <div class="border-top w-100 mt-3">
-                                    <div class="d-flex justify-content-between p-4">
-                                        <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                                        <span class="text-white"><i class="fa fa-star mr-2"></i>4.5
-                                            <small>(250)</small></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                    <h2 class="mb-3" style="text-align: right;">دورات مشابهة</h2>
+<div class="owl-carousel related-carousel position-relative" style="padding: 0 30px;">
+    @foreach ($relatedCourses as $course)
+        <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="{{ route('coursedetails', $course->id) }}">
+            <img class="img-fluid" src="{{ asset('images/' .$course->image) }}" alt="{{ $course->name }}">
+            <div class="courses-text">
+                <h4 class="text-center text-white px-3">{{ $course->name }}</h4>
+                <div class="border-top w-100 mt-3">
+                    <div class="d-flex justify-content-between p-4">
+                        <span class="text-white"><i class="fa fa-user mr-2"></i>{{ $course->instructor }}</span>
+                        {{-- <span class="text-white"><i class="fa fa-star mr-2"></i>{{ $course->rating }}
+                            <small>({{ $course->reviews }})</small></span> --}}
                     </div>
+                </div>
+            </div>
+        </a>
+    @endforeach
+</div>
                </div>
 
                 <div class="col-lg-4 mt-5 mt-lg-0">
                     <div class="bg-primary mb-5 py-3">
                         <h3 class="text-white py-3 px-4 m-0">Course Features</h3>
                         <div class="d-flex justify-content-between border-bottom px-4">
-                            <h6 class="text-white my-3">Instructor</h6>
-                            <h6 class="text-white my-3">رغد البطاينة</h6>
+                            <h6 class="text-white my-3">المدرب</h6>
+                            <h6 class="text-white my-3">{{ $courses->instructor }}</h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
                             <h6 class="text-white my-3">التقييم</h6>
@@ -140,15 +111,15 @@
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
                             <h6 class="text-white my-3">عدد المحاضرات</h6>
-                            <h6 class="text-white my-3">15</h6>
+                            <h6 class="text-white my-3">{{ $courses->Lectures }}</h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
                             <h6 class="text-white my-3">المدة الزمنية</h6>
-                            <h6 class="text-white my-3">9 اشهر</h6>
+                            <h6 class="text-white my-3">{{ $courses->Duration }}</h6>
                         </div>
                         <div class="d-flex justify-content-between border-bottom px-4">
-                            <h6 class="text-white my-3">Skill level</h6>
-                            <h6 class="text-white my-3">All Level</h6>
+                            <h6 class="text-white my-3">حالة الدورة</h6>
+                            <h6 class="text-white my-3">{{ $courses->status }}</h6>
                         </div>
                         <div class="d-flex justify-content-between px-4">
                             <h6 class="text-white my-3">اللغة</h6>
@@ -156,34 +127,19 @@
                         </div>
                         {{-- <h5 class="text-white py-3 px-4 m-0">Course Price: $199</h5> --}}
                         <div class="py-3 px-4">
-                            <a class="btn btn-block btn-secondary py-3 px-5" href="">Enroll Now</a>
+                            <a class="btn btn-block btn-secondary py-3 px-5" href="">تواصل معنا لمزيد من المعلومات</a>
                         </div>
                     </div>
-                    {{-- @endforeach --}}
 
                     <div class="mb-5">
-                        <h2 class="mb-3">Categories</h2>
+                        <h2 class="mb-3">تصنيفات  </h2>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="" class="text-decoration-none h6 m-0">Web Design</a>
-                                <span class="badge badge-primary badge-pill">150</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="" class="text-decoration-none h6 m-0">Web Development</a>
-                                <span class="badge badge-primary badge-pill">131</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="" class="text-decoration-none h6 m-0">Online Marketing</a>
-                                <span class="badge badge-primary badge-pill">78</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="" class="text-decoration-none h6 m-0">Keyword Research</a>
-                                <span class="badge badge-primary badge-pill">56</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="" class="text-decoration-none h6 m-0">Email Marketing</a>
-                                <span class="badge badge-primary badge-pill">98</span>
-                            </li>
+                            @foreach ($categories as $category)
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    <a href="{{ route('category.indexcategory', $category->id) }}" class="text-decoration-none h6 m-0">{{ $category->name }}</a>
+                                    {{-- <span class="badge badge-primary badge-pill">{{ $category->count }}</span> --}}
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
 

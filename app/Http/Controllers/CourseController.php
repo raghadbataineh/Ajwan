@@ -53,16 +53,20 @@ class CourseController extends Controller
 
     public function CourseDetails($id)
     {
-        $category = Category::find($id);
-    
-        if (!$category) {
+        $courses = Course::find($id);
+        // $categories = Category::all();
+        $categories = Category::withCount('courses')->take(6)->get();
+
+
+        if (!$courses) {
             abort(404);
         }
-    
+        $relatedCourses = Course::inRandomOrder()->limit(3)->get(); // Adjust the query as needed
+
         // Retrieve all products associated with this shop
-        $courses = $category->courses;
-    
-        return view('detail', compact('courses'));
+        // $courses = $category->courses;
+        // dd($courses);
+        return view('detail', compact('courses','relatedCourses','categories'));
     }
 
     /**
