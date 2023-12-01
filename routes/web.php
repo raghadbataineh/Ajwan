@@ -28,17 +28,19 @@ use App\Http\Controllers\MessagesControllerAD;
 //     return view('course');
 // });
 Route::get('/course', [CourseController::class, 'course'])->name('course');
+Route::get('/course/{category_id}', [CourseController::class, 'filterByCategory'])->name('course');
+
 Route::get('/', function () {
     return view('index');
 });
 
 Route::get('/', [CategoryController::class, 'indexcategory'])->name('category.indexcategory');
-Route::get('/shop/{id}', [CategoryController::class, 'shop'])->name('shop.index');
+
 Route::get('/coursedetails', function () {
     return view('detail');
 });
 
-// Route::get('details/{id}', [CourseController::class, 'CourseDetails'])->name('coursedetails');
+Route::get('details/{id}', [CourseController::class, 'CourseDetails'])->name('coursedetails');
 Route::get('/about', function () {
     return view('about
     ');
