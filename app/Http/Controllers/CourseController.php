@@ -23,15 +23,16 @@ class CourseController extends Controller
         $course= Course::all();
         return view('course', compact('course'));
     }
-//     public function filterByCategory(Request $request, $category_id)
-//    {
-//        $query = Course::where('category_id', $category_id);
+    public function filterByCategory(Request $request, $category_id)
+   {
+       $query = Course::where('category_id', $category_id);
    
-//        // Handle other filters if required
+       // Handle other filters if required
    
-//        $course = $query->paginate(9);
+       $course = $query->paginate(9);
        
-//        return view('course', compact('course', 'category_id'));
+       return view('course', compact('course', 'category_id'));
+   }
 //    }
 //    public function search(Request $request)
 //    {
