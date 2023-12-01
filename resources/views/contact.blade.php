@@ -1,50 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('.\layouts\master')
 
-<head>
-    <meta charset="utf-8">
-    <title>Edukate - Online Education Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    
+{{-- @section('title','') --}}
 
 
- 
+@section('css')
+
+@endsection
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-1">تواصل معنا </h1>
-            <div class="d-inline-flex text-white mb-5">
-                <p class="m-0 text-uppercase"><a class="text-white" href="">الصفحة الرئيسية </a></p>
-                <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                <p class="m-0 text-uppercase">تواصل معنا</p>
-            </div>
-            
-        </div>
-    </div>
-    <!-- Header End -->
+
+@section('content')
+
 
 
     <!-- Contact Start -->
@@ -157,6 +123,9 @@
 
 
    
-</body>
+    @endsection
 
-</html>
+    @section('scripts')
+    
+    @endsection
+    

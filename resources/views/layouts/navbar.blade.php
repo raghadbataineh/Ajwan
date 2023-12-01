@@ -46,16 +46,15 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse" dir="rtl">
             <div class="navbar-nav mx-auto py-0">
-                <a href="index.html" class="nav-item nav-link">الصفحة الرئيسية</a>
+                <a href="{{route('category.indexcategory')}}" class="nav-item nav-link">الصفحة الرئيسية</a>
                 <a href="{{route('about')}}" class="nav-item nav-link active">من نحن </a>
-                <a href="course.html" class="nav-item nav-link">كورسات</a>
+                <a href="{{route('courses')}}" class="nav-item nav-link">كورسات</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">الصفحات</a>
                     <div class="dropdown-menu m-0">
-                        <a href="detail.html" class="dropdown-item">Course Detail</a>
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                        <a href="team.html" class="dropdown-item">Instructors</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="feature.html" class="dropdown-item">مميزات جمعية فكرة</a>
+                        <a href="{{route('gallery')}}" class="dropdown-item">الملحقات</a>
+                        {{-- <a href="testimonial.html" class="dropdown-item">Testimonial</a> --}}
                     </div>
                 </div>
                 <a href="{{route('show.contact')}}" class="nav-item nav-link">تواصل معنا</a>

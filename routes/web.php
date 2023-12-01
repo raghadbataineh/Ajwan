@@ -30,6 +30,8 @@ use App\Http\Controllers\MessagesControllerAD;
 Route::get('/course', [CourseController::class, 'course'])->name('course');
 Route::get('/course/{category_id}', [CourseController::class, 'filterByCategory'])->name('course');
 
+Route::get('/courses', [CourseController::class, 'course'])->name('courses');
+
 Route::get('/', function () {
     return view('index');
 });
@@ -39,6 +41,9 @@ Route::get('/', [CategoryController::class, 'indexcategory'])->name('category.in
 Route::get('/coursedetails', function () {
     return view('detail');
 });
+Route::get('/gallary', function () {
+    return view('testimonial');
+})->name('gallery');
 
 Route::get('details/{id}', [CourseController::class, 'CourseDetails'])->name('coursedetails');
 Route::get('/about', function () {

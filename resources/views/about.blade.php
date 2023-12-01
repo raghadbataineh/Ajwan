@@ -1,104 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Edukate - Online Education Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
 
 
 
-   
+@extends('.\layouts\master')
+
+{{-- @section('title','') --}}
 
 
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid page-header position-relative overlay-bottom" style="margin-bottom: 90px;">
-        <div class="container text-center py-5">
-            <h1 class="text-white display-1">من نحن </h1>
-            <div class="d-inline-flex text-white mb-5" dir="rtl">
-                <p class="m-0 text-uppercase"><a class="text-white" href="">الصفحة الرئيسية </a></p>
-                <i class="fa fa-angle-double-left pt-1 px-3"></i>
-                <p class="m-0 text-uppercase">من نحن </p>
+@section('css')
+
+@endsection
+
+
+
+@section('content')
+
+
+
+
+
+ <!-- About Start -->
+ <div class="container-fluid py-5" style="direction: rtl; text-align: right;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="{{ asset('img/WhatsApp Image 2023-11-22 at 1.59.40 PM.jpeg') }}" style="object-fit: cover;">
+                </div>
             </div>
-            <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
-                <div class="input-group">
-                    <div class="input-group-prepend">
+            <div class="col-lg-7">
+                <div class="section-title position-relative mb-4">
+                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2" style="font-size: 30px">من نحن</h6>
+                    <h1 class="display-4">المعرفة ليست التي تحفظ، بل المعرفة هي التي تنتفع بها</h1>
+                </div>
+                <p>المعرفة، التعلم و التدريب. إن هذه العوامل هي مفاتيح التطور والنجاح. منذ العام 2015 والجمعية تحقق نجاحاً محلياً ودولياً واضعاً مقاييس جديدة في سوق مراكز التعليم والتدريب.
+
+                    ونظراً لتميز الجمعية في مجال التعليم والتدريب لالتزامه الكامل بالقوانين وجودة الخدمة والتعليم وسعيه الدؤوب لنقل تجربة التعليم والتدريب لأعلى المستويات العالمية بالتركيز على صقل وتنمية المهارات والقدرات الفردية لبناء اشخاص منتجين للمعرفة متبعين وسائل التدريب الحديثة ومستخدمين أفضل الموارد المتوفرة
+                </p>
+                <div class="row pt-3 mx-0">
+                    <div class="col-3 px-0">
+                        <div class="bg-success text-center p-4">
+                            <h1 class="text-white" data-toggle="counter-up">3.600</h1>
+                            <h6 class="text-uppercase text-white">قطاع <span class="d-block">ألتعليمي</span></h6>
+                        </div>
                     </div>
-                    <input type="text" readonly class="form-control border-light" style="padding: 30px 25px;" placeholder="                        المعرفة ليست التي تحفظ، بل المعرفة هي التي تنتفع بها
-                    ">
-                    <div class="input-group-append">
-                        
+                    <div class="col-3 px-0">
+                        <div class="bg-primary text-center p-4">
+                            <h1 class="text-white" data-toggle="counter-up">1.000</h1>
+                            <h6 class="text-uppercase text-white">قطاع<span class="d-block">ألتنموي</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-3 px-0">
+                        <div class="bg-secondary text-center p-4">
+                            <h1 class="text-white" data-toggle="counter-up">3.250</h1>
+                            <h6 class="text-uppercase text-white">قطاع<span class="d-block">ألحماية</span></h6>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+</div>
 
-
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">من نحن </h6>
-                        <h1 class="display-4">First Choice For Online Education Anywhere</h1>
-                    </div>
-                        <p dir="rtl" style="text-align: right"> المعرفة، التعلم و التدريب. إن هذه العوامل هي مفاتيح التطور والنجاح. منذ العام 2015 والجمعية تحقق نجاحاً محلياً ودولياً واضعاً مقاييس جديدة في سوق مراكز التعليم والتدريب.
-                        </p> 
-                    <div class="row pt-3 mx-0">
-                        <div class="col-3 px-0">
-                            <div class="bg-success text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">3600</h1>
-                                <h6 class="text-uppercase text-white">القطاع <span class="d-block">التعليمي</span></h6>
-                            </div>
-                        </div>
-                        <div class="col-3 px-0">
-                            <div class="bg-primary text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">33250</h1>
-                                <h6 class="text-uppercase text-white">القطاع <span class="d-block">التنموي</span></h6>
-                            </div>
-                        </div>
-                        <div class="col-3 px-0">
-                            <div class="bg-secondary text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">123</h1>
-                                <h6 class="text-uppercase text-white">قطاع <span class="d-block">الحماية</span></h6>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
+<!-- About End -->
 
 
     <!-- Feature Start -->
@@ -150,13 +113,14 @@
     <!-- Feature Start -->
 
 
-    
-
+  
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-</body>
+    @endsection
 
-</html>
+    @section('scripts')
+    
+    @endsection
